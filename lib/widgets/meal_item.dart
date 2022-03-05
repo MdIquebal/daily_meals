@@ -117,7 +117,7 @@ class MealItem extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(Icons.work),
+                        Icon(Icons.work_outline),
                         SizedBox(
                           width: 6,
                         ),
@@ -126,7 +126,7 @@ class MealItem extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(Icons.money),
+                        Icon(Icons.money_outlined),
                         SizedBox(
                           width: 6,
                         ),
