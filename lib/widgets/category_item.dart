@@ -1,6 +1,6 @@
+import 'package:flutter/material.dart';
 
 import '../screens/category_meals_screen.dart';
-import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;
@@ -9,27 +9,27 @@ class CategoryItem extends StatelessWidget {
 
   CategoryItem(this.id, this.title, this.color);
 
-  void SelectCategory(BuildContext ctx) {
+  void selectCategory(BuildContext ctx) {
     Navigator.of(ctx).pushNamed(
-     CategoryMealsScreen.routName, arguments: {
-       'id': id,
-       'title': title,
-     }
+      CategoryMealsScreen.routeName,
+      arguments: {
+        'id': id,
+        'title': title,
+      },
     );
   }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => SelectCategory(context),
+      onTap: () => selectCategory(context),
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(15),
       child: Container(
         padding: const EdgeInsets.all(15),
         child: Text(
           title,
-          //========= Here video => title, but show error ===================
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.headline6,
         ),
         decoration: BoxDecoration(
           gradient: LinearGradient(
